@@ -1,0 +1,366 @@
+/**
+ *=ПОЛЕЗНЫЕ ИСТОЧНИКИ
+ *
+ *	1. Палитры HTML/CSS цветов
+ *	   https://colorscheme.ru/html-colors.html
+ *	   https://csscolor.ru/hex/c230d9
+ *
+*/
+/* Глобальный шрифт для всех элементов (лучше не делать) */
+* {
+	/*font-family: monospace;*/
+}
+
+
+/* фон под цвет темно-голубого фона винды */
+body {
+	background-color: #002240;	/* v1 */
+}
+
+
+.wrapper {
+    height: 100vh;
+    display: flex;
+
+    /* Direction of the items, can be row or column */
+    flex-direction: column;
+}
+
+
+/* Хедер и Футер */
+header,
+footer {
+    /*height: 40px;*/			/* фиксированная высота блока */	
+	/*height: 10vh;*/			/* высота блока зависит от размера экрана по вертикали  */
+	height: 40px;
+	line-height: 40px;
+}
+
+
+/* Хедер */
+header {
+	/*border: 1px solid yellow;*/
+	color: #ff4500;				/* OrangeRed */
+	font-size: 12px;
+	padding-left: 5px;
+}
+
+/* Хлебные крошки */
+#breadcrumbs {
+	/*border: 1px solid red;*/
+	display: block;				/* display: none; - отключает элемент */
+	padding-left: 5px;
+}
+
+
+/* Стиль списка */
+#breadcrumbs ul.breadcrumbs_ul {
+  padding: 2px 4px;
+  list-style: none;
+  /*background-color: #eee;*/
+}
+
+/* Отображение элементов списка бок о бок */
+#breadcrumbs ul.breadcrumbs_ul li {
+	display: inline;
+	font-family: monospace;
+	font-size: 12px;
+}
+
+/* Добавить символ косой черты (/) перед/за каждым элементом списка */
+#breadcrumbs ul.breadcrumbs_ul li+li:before {
+	padding: 2px;
+	color: #bbbbbb;
+	content: "|\00a0";			/* с доп пробелом */
+	/*content: "|";*/
+}
+
+/* Добавить цвет для всех ссылок внутри списка */
+#breadcrumbs ul.breadcrumbs_ul li a {
+	color: #bbbbbb;
+	text-decoration: none;
+}
+
+/* Добавить цвет на наведении курсора мыши */
+#breadcrumbs ul.breadcrumbs_ul li a:hover {
+	color: #bbbbbb;
+	text-decoration: underline;
+}
+
+
+/* Центральный блок */
+main {
+	/*border: 1px solid yellow;*/
+	flex: 1;
+	color: #bbbbbb;
+	padding-top: 10px;
+	font-family: monospace;
+}
+
+main .center {
+	/*border: 1px solid red;*/
+	border-top: 1px solid #bbbbbb;
+	margin-left: 5px;
+	padding-top: 10px;
+}
+
+#dataTable {
+	/*border: 1px solid red;*/
+	/*display: none;*/ 			/* отключает элемент */
+	margin-top: 20px;
+	margin-left: 20px;
+	
+}
+
+#dataTable table {
+	border-collapse: collapse;
+}
+
+#dataTable table tr,th,td {
+	/*border-bottom: 1px solid #bbbbbb;*/
+	border-bottom: 1px solid #274967;			/* границы таблицы чуть светлее чем цвет фона */
+	
+}
+
+#dataTable table th {
+	/*color: red;*/
+	text-align: left;
+}
+
+#dataTable table td {
+	/*color: yellow;*/
+	padding-top: 3px;							/* делаем строки таблицы немного ширше по высоте */
+}
+
+
+#dataTable table .col1 {
+	/*color: red;*/
+	text-align: left;
+	width: 50px;
+}
+
+#dataTable table .col2 {
+	/*color: red;*/
+	text-align: left;
+	width: 140px;
+}
+
+#dataTable table .col3 {
+	/*color: red;*/
+	text-align: left;
+	width: 100px;
+}
+
+#dataTable table .col4 {
+	color: red;
+	text-align: left;
+	width: 50px;
+}
+
+#dataTable table .col5 {
+	color: red;
+	text-align: left;
+	width: 50px;
+}
+
+
+/* настраиваем стилизацию ссылки (ссылка на внутреннюю статью) */
+/* unvisited link */
+#dataTable table .col4 a:link {
+	/*color: #ff4500;*/					/* OrangeRed */
+	color: #00bfff;						/* DeepSkyBlue */
+	text-decoration: none;				/* отключаем подчеркивание при наведении */
+}
+
+/* visited link */
+#dataTable table .col4 a:visited {
+	/*color: #ff4500;*/					/* OrangeRed */
+	color: #00bfff;						/* DeepSkyBlue */
+}
+
+/* mouse over link */
+#dataTable table .col4 a:hover {
+	color: #ff4500;						/* OrangeRed */
+	text-decoration: underline;			/* подчеркивание при наведении */
+}
+
+/* selected link */
+#dataTable table .col4 a:active {
+	text-decoration: none;
+}
+
+
+/* настраиваем стилизацию ссылки (ссылка на магазин steam) */
+/* unvisited link */
+#dataTable table .col5 a:link {
+	color: #bbbbbb;						/* Серый цвет - такойже как и у текста */
+	text-decoration: none;				/* отключаем подчеркивание при наведении */
+}
+
+/* visited link */
+#dataTable table .col5 a:visited {
+	color: #bbbbbb;						/* Серый цвет - такойже как и у текста */
+}
+
+/* mouse over link */
+#dataTable table .col5 a:hover {
+	text-decoration: underline;			/* подчеркивание при наведении */
+	color: #00bfff;						/* DeepSkyBlue */
+}
+
+/* selected link */
+#dataTable table .col5 a:active {
+	text-decoration: none;
+}
+
+
+/* Информационный блок с описанием игры */
+#gameInfo {
+	/*border: 1px solid green;*/
+	width: 800px;
+    padding: 10px; 					/* поля вокруг текста */
+    margin: auto; 					/* выравниваем по центру */
+    /*background: #fc0;*/			/* цвет фона (оставляем как основной фон) */
+	
+  /*background-image: url("/images/dead-space-marker1.png");*/ 		/* background image */
+	background-image: url("/images/dead-space-marker1_o60.png");	/* у изображения прозрачность 60% */
+	background-color: #002240; 										/* used if the image is unavailable */
+	background-repeat: no-repeat; 									/* do not repeat the image */
+	background-position: center;									/* center the image */
+	/*background-size: cover;*/ 									/* resize the background image to cover the entire container */
+	/*opacity: .7;*/ 												/* прозрачность применяется ко всему контейнеру, а не только к изображению */
+}
+
+#gameTitle {
+	/*display: none;*/
+	/*border: 1px solid green;*/
+	/*color: red;*/
+	color: #ff4500;					/* OrangeRed */
+	text-align: center;
+	font-size: 22px;
+	font-weight: bold;
+	height: 50px;
+}
+
+#gameDescription {
+	/*border: 1px solid green;*/
+	text-indent: 1.5em;				/* Отступ первой строки */
+    text-align: justify;			/* Выравнивание по ширине */
+}
+
+#gameDescription p {
+	/*color: red;*/
+	font-size: 15px;
+	padding-bottom: 12px;
+}
+/* настраиваем стилизацию ссылки */
+#previewLink a:link {
+	color: #00bfff;					/* DeepSkyBlue */
+	text-decoration: none;			/* отключаем подчеркивание при наведении */
+	
+}
+/* visited link */
+#previewLink a:visited {
+	color: #00bfff;					/* DeepSkyBlue */
+}
+/* mouse over link */
+#previewLink a:hover {
+	color: #ff4500;					/* OrangeRed */
+	text-decoration: underline;		/* подчеркивание при наведении */
+}
+/* selected link */
+#previewLink a:active {
+	color: #ff4500;					/* OrangeRed */
+	text-decoration: none;
+}
+
+
+#gameInfoMassEffect {
+	/*border: 1px solid green;*/
+	width: 800px;
+    padding: 10px; 					/* поля вокруг текста */
+    margin: auto; 					/* выравниваем по центру */
+	
+	/*background-image: url("/images/dead-space-reaper1.jpg");*/ 		/* background image */
+    background-image: url("/images/dead-space-reaper1_o60.png");
+
+	background-color: #002240; 											/* used if the image is unavailable */
+	background-repeat: no-repeat; 										/* do not repeat the image */
+	background-position: center;										/* center the image */
+	background-size: cover; 											/* resize the background image to cover the entire container */
+}
+
+#gameInfoDyingLight {
+	/*border: 1px solid green;*/
+	width: 800px;
+    padding: 10px; 					/* поля вокруг текста */
+    margin: auto; 					/* выравниваем по центру */
+	
+    background-image: url("/images/dying-light-img1_o60.png"); 		/* background image (60% opacity) */
+		
+	background-color: #002240; 										/* used if the image is unavailable */
+	background-repeat: no-repeat; 									/* do not repeat the image */
+	background-position: center;									/* center the image */
+	background-size: cover; 										/* resize the background image to cover the entire container */
+}
+
+#gameInfoPrey2006 {
+	/*border: 1px solid green;*/
+	width: 800px;
+    padding: 10px; 					/* поля вокруг текста */
+    margin: auto; 					/* выравниваем по центру */
+	
+    background-image: url("/images/prey-2006-img1.png"); 		/* background image (60% opacity) */
+		
+	background-color: #002240; 										/* used if the image is unavailable */
+	background-repeat: no-repeat; 									/* do not repeat the image */
+	background-position: center;									/* center the image */
+	background-size: cover; 										/* resize the background image to cover the entire container */
+}
+
+
+/* Футер */
+footer {
+	/*border: 1px solid yellow;*/
+	color: #bbbbbb;
+	font-family: monospace;
+}
+
+footer span.copyright {
+	/*border: 1px solid red;*/
+	margin-left: 10px;
+	float: left;
+}
+
+footer span.social {
+	/*border: 1px solid red;*/
+	margin-right: 10px;
+	float: right;
+}
+
+/* настраиваем стилизацию ссылки */
+/* unvisited link */
+footer a:link {
+	/*color: #ff4500;*/				/* OrangeRed */
+	color: #00bfff;					/* DeepSkyBlue */
+	text-decoration: none;			/* отключаем подчеркивание при наведении */
+}
+
+/* visited link */
+footer a:visited {
+	/*color: #ff4500;*/				/* OrangeRed */
+	color: #00bfff;					/* DeepSkyBlue */
+}
+
+/* mouse over link */
+footer a:hover {
+	color: #ff4500;					/* OrangeRed */
+	text-decoration: underline;		/* подчеркивание при наведении */
+}
+
+/* selected link */
+footer a:active {
+	color: #ff4500;					/* OrangeRed */
+	text-decoration: none;
+}
+

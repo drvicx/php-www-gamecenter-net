@@ -1,0 +1,12 @@
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+*.xml
+
+### App specific ###
+##logs/user.log/**
+
+### Project specific ###
+_protected

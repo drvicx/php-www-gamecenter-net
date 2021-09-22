@@ -1,0 +1,54 @@
+/**
+ *=ПОЛЕЗНЫЕ ИСТОЧНИКИ
+ *
+ *	1. Палитры HTML/CSS цветов
+ *	   https://colorscheme.ru/html-colors.html
+ *	   https://csscolor.ru/hex/c230d9
+ *
+*/
+
+/* фон под цвет голубого фона винды */
+body {
+	background-color: #002240;	/* темно-синий */
+}
+
+/* текст по центру страницы */
+div.centered {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%)
+}
+
+/* автомасштабирование текста по % of viewport width*/
+div.centered h1 {
+	/*color: #FF8C00;*/				/* DarkOrange */
+	/*color: #B22222;*/				/* FireBrick */
+	color: #ff4500;					/* OrangeRed */
+	font-size: 4.5vw;
+}
+
+/* убираем стилизацию под ссылку */
+/* unvisited link */
+div.centered a:link {
+  color: #ff4500;					/* OrangeRed */
+  text-decoration: none;			/* отключаем подчеркивание при наведении */
+}
+
+/* visited link */
+div.centered a:visited {
+  color: #ff4500;					/* OrangeRed */
+}
+
+/* mouse over link */
+div.centered a:hover {
+  color: #ff4500;					/* OrangeRed */
+  /*text-decoration: underline;*/	/* подчеркивание при наведении */
+}
+
+/* selected link */
+div.centered a:active {
+  color: #ff4500;					/* OrangeRed */
+  text-decoration: none;
+}
