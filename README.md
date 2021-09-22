@@ -1,6 +1,6 @@
 # php-www-gamecenter-net
 Training php website project about games
-<br>
+<br><br>
 
 **=CHANGE LOG**<br>
 *new at the beginning <br>
