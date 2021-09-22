@@ -31,7 +31,7 @@ Training php website project about games
 <br>
 
 
-**=SITES PAGE SHOTS**
+**=SITE PAGES SHOTS**
 - Домашняя страница
 ![homePage](_preview/site-preview_20210922_1020_home.png?raw=true)
 
