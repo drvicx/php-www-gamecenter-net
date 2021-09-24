@@ -1,94 +1,132 @@
 /**
- *=ПОЛЕЗНЫЕ ИСТОЧНИКИ
+ *=РџРћР›Р•Р—РќР«Р• РРЎРўРћР§РќРРљР
  *
- *	1. Палитры HTML/CSS цветов
+ *	1. РџР°Р»РёС‚СЂС‹ HTML/CSS С†РІРµС‚РѕРІ
  *	   https://colorscheme.ru/html-colors.html
  *	   https://csscolor.ru/hex/c230d9
  *
 */
-/* Глобальный шрифт для всех элементов (лучше не делать) */
+/* Р“Р»РѕР±Р°Р»СЊРЅС‹Р№ С€СЂРёС„С‚ РґР»СЏ РІСЃРµС… СЌР»РµРјРµРЅС‚РѕРІ (Р»СѓС‡С€Рµ РЅРµ РґРµР»Р°С‚СЊ) */
 * {
 	/*font-family: monospace;*/
 }
 
-
-/* фон под цвет темно-голубого фона винды */
+/* С„РѕРЅ РїРѕРґ С†РІРµС‚ С‚РµРјРЅРѕ-РіРѕР»СѓР±РѕРіРѕ С„РѕРЅР° РІРёРЅРґС‹ */
 body {
 	background-color: #002240;	/* v1 */
 }
 
-
 .wrapper {
     height: 100vh;
     display: flex;
-
     /* Direction of the items, can be row or column */
     flex-direction: column;
 }
 
 
-/* Хедер и Футер */
+/* РҐРµРґРµСЂ Рё Р¤СѓС‚РµСЂ */
 header,
 footer {
-    /*height: 40px;*/			/* фиксированная высота блока */	
-	/*height: 10vh;*/			/* высота блока зависит от размера экрана по вертикали  */
+    /*height: 40px;*/			/* С„РёРєСЃРёСЂРѕРІР°РЅРЅР°СЏ РІС‹СЃРѕС‚Р° Р±Р»РѕРєР° */
+	/*height: 10vh;*/			/* РІС‹СЃРѕС‚Р° Р±Р»РѕРєР° Р·Р°РІРёСЃРёС‚ РѕС‚ СЂР°Р·РјРµСЂР° СЌРєСЂР°РЅР° РїРѕ РІРµСЂС‚РёРєР°Р»Рё  */
 	height: 40px;
 	line-height: 40px;
 }
 
 
-/* Хедер */
+/* РҐРµРґРµСЂ */
 header {
 	/*border: 1px solid yellow;*/
-	color: #ff4500;				/* OrangeRed */
+}
+/*-Р—Р°РіРѕР»РѕРІРѕРє*/
+.headerLeft {
+	/*border: 1px solid green;*/
+	float: left;
+	display: block;
+	width: 300px;
+	color: #ff4500;					/* OrangeRed */
 	font-size: 12px;
 	padding-left: 5px;
 }
+/*-РђРґРјРёРЅРєР°*/
+.headerRight {
+	/*border: 1px solid green;*/
+	float: right;
+	display: block;
+	/*width: 100px;*/
+	color: #bbbbbb;					/* РґРµС„РѕР»С‚РЅС‹Р№ С†РІРµС‚ РґР»СЏ СЂР°Р·РґРµР»РёС‚РµР»СЏ РјРµР¶РґСѓ СЃСЃС‹Р»РєР°РјРё - СЃРµСЂС‹Р№ */
+	font-family: monospace;
+	font-size: 14px;
+	padding-right: 5px;
+}
+/*-СЃС‚РёР»РёР·Р°С†РёСЏ СЃСЃС‹Р»РєРё */
+/* unvisited link */
+.headerRight a:link {
+	color: #00bfff;					/* DeepSkyBlue */
+	text-decoration: none;			/* РѕС‚РєР»СЋС‡Р°РµРј РїРѕРґС‡РµСЂРєРёРІР°РЅРёРµ РїСЂРё РЅР°РІРµРґРµРЅРёРё */
+}
+/* visited link */
+.headerRight a:visited {
+	/*color: #ff4500;*/				/* OrangeRed */
+	color: #00bfff;					/* DeepSkyBlue */
+}
+/* mouse over link */
+.headerRight a:hover {
+	color: #ff4500;					/* OrangeRed */
+	text-decoration: underline;		/* РїРѕРґС‡РµСЂРєРёРІР°РЅРёРµ РїСЂРё РЅР°РІРµРґРµРЅРёРё */
+}
+/* selected link */
+.headerRight a:active {
+	color: #ff4500;					/* OrangeRed */
+	text-decoration: none;
+}
 
-/* Хлебные крошки */
+
+
+/* РҐР»РµР±РЅС‹Рµ РєСЂРѕС€РєРё */
 #breadcrumbs {
 	/*border: 1px solid red;*/
-	display: block;				/* display: none; - отключает элемент */
+	display: block;						/* display: none; - РѕС‚РєР»СЋС‡Р°РµС‚ СЌР»РµРјРµРЅС‚ */
 	padding-left: 5px;
 }
 
 
-/* Стиль списка */
+/* РЎС‚РёР»СЊ СЃРїРёСЃРєР° */
 #breadcrumbs ul.breadcrumbs_ul {
   padding: 2px 4px;
   list-style: none;
   /*background-color: #eee;*/
 }
 
-/* Отображение элементов списка бок о бок */
+/* РћС‚РѕР±СЂР°Р¶РµРЅРёРµ СЌР»РµРјРµРЅС‚РѕРІ СЃРїРёСЃРєР° Р±РѕРє-Рѕ-Р±РѕРє */
 #breadcrumbs ul.breadcrumbs_ul li {
 	display: inline;
 	font-family: monospace;
 	font-size: 12px;
 }
 
-/* Добавить символ косой черты (/) перед/за каждым элементом списка */
+/* Р”РѕР±Р°РІРёС‚СЊ СЃРёРјРІРѕР» РІРµСЂС‚РёРєР°Р»СЊРЅРѕР№ С‡РµСЂС‚С‹ (|) РїРµСЂРµРґ/Р·Р° РєР°Р¶РґС‹Рј СЌР»РµРјРµРЅС‚РѕРј СЃРїРёСЃРєР° */
 #breadcrumbs ul.breadcrumbs_ul li+li:before {
 	padding: 2px;
 	color: #bbbbbb;
-	content: "|\00a0";			/* с доп пробелом */
+	content: "|\00a0";			/* СЃ РґРѕРї РїСЂРѕР±РµР»РѕРј */
 	/*content: "|";*/
 }
 
-/* Добавить цвет для всех ссылок внутри списка */
+/* Р”РѕР±Р°РІРёС‚СЊ С†РІРµС‚ РґР»СЏ РІСЃРµС… СЃСЃС‹Р»РѕРє РІРЅСѓС‚СЂРё СЃРїРёСЃРєР° */
 #breadcrumbs ul.breadcrumbs_ul li a {
 	color: #bbbbbb;
 	text-decoration: none;
 }
 
-/* Добавить цвет на наведении курсора мыши */
+/* Р”РѕР±Р°РІРёС‚СЊ С†РІРµС‚ РЅР° РЅР°РІРµРґРµРЅРёРё РєСѓСЂСЃРѕСЂР° РјС‹С€Рё */
 #breadcrumbs ul.breadcrumbs_ul li a:hover {
 	color: #bbbbbb;
 	text-decoration: underline;
 }
 
 
-/* Центральный блок */
+/* Р¦РµРЅС‚СЂР°Р»СЊРЅС‹Р№ Р±Р»РѕРє */
 main {
 	/*border: 1px solid yellow;*/
 	flex: 1;
@@ -106,7 +144,7 @@ main .center {
 
 #dataTable {
 	/*border: 1px solid red;*/
-	/*display: none;*/ 			/* отключает элемент */
+	/*display: none;*/ 			/* РѕС‚РєР»СЋС‡Р°РµС‚ СЌР»РµРјРµРЅС‚ */
 	margin-top: 20px;
 	margin-left: 20px;
 	
@@ -118,7 +156,7 @@ main .center {
 
 #dataTable table tr,th,td {
 	/*border-bottom: 1px solid #bbbbbb;*/
-	border-bottom: 1px solid #274967;			/* границы таблицы чуть светлее чем цвет фона */
+	border-bottom: 1px solid #274967;			/* РіСЂР°РЅРёС†С‹ С‚Р°Р±Р»РёС†С‹ С‡СѓС‚СЊ СЃРІРµС‚Р»РµРµ С‡РµРј С†РІРµС‚ С„РѕРЅР° */
 	
 }
 
@@ -129,7 +167,7 @@ main .center {
 
 #dataTable table td {
 	/*color: yellow;*/
-	padding-top: 3px;							/* делаем строки таблицы немного ширше по высоте */
+	padding-top: 3px;							/* РґРµР»Р°РµРј СЃС‚СЂРѕРєРё С‚Р°Р±Р»РёС†С‹ РЅРµРјРЅРѕРіРѕ С€РёСЂС€Рµ РїРѕ РІС‹СЃРѕС‚Рµ */
 }
 
 
@@ -164,12 +202,12 @@ main .center {
 }
 
 
-/* настраиваем стилизацию ссылки (ссылка на внутреннюю статью) */
+/* РЅР°СЃС‚СЂР°РёРІР°РµРј СЃС‚РёР»РёР·Р°С†РёСЋ СЃСЃС‹Р»РєРё (СЃСЃС‹Р»РєР° РЅР° РІРЅСѓС‚СЂРµРЅРЅСЋСЋ СЃС‚Р°С‚СЊСЋ) */
 /* unvisited link */
 #dataTable table .col4 a:link {
 	/*color: #ff4500;*/					/* OrangeRed */
 	color: #00bfff;						/* DeepSkyBlue */
-	text-decoration: none;				/* отключаем подчеркивание при наведении */
+	text-decoration: none;				/* РѕС‚РєР»СЋС‡Р°РµРј РїРѕРґС‡РµСЂРєРёРІР°РЅРёРµ РїСЂРё РЅР°РІРµРґРµРЅРёРё */
 }
 
 /* visited link */
@@ -181,7 +219,7 @@ main .center {
 /* mouse over link */
 #dataTable table .col4 a:hover {
 	color: #ff4500;						/* OrangeRed */
-	text-decoration: underline;			/* подчеркивание при наведении */
+	text-decoration: underline;			/* РїРѕРґС‡РµСЂРєРёРІР°РЅРёРµ РїСЂРё РЅР°РІРµРґРµРЅРёРё */
 }
 
 /* selected link */
@@ -190,21 +228,21 @@ main .center {
 }
 
 
-/* настраиваем стилизацию ссылки (ссылка на магазин steam) */
+/* РЅР°СЃС‚СЂР°РёРІР°РµРј СЃС‚РёР»РёР·Р°С†РёСЋ СЃСЃС‹Р»РєРё (СЃСЃС‹Р»РєР° РЅР° РјР°РіР°Р·РёРЅ steam) */
 /* unvisited link */
 #dataTable table .col5 a:link {
-	color: #bbbbbb;						/* Серый цвет - такойже как и у текста */
-	text-decoration: none;				/* отключаем подчеркивание при наведении */
+	color: #bbbbbb;						/* РЎРµСЂС‹Р№ С†РІРµС‚ - С‚Р°РєРѕР№Р¶Рµ РєР°Рє Рё Сѓ С‚РµРєСЃС‚Р° */
+	text-decoration: none;				/* РѕС‚РєР»СЋС‡Р°РµРј РїРѕРґС‡РµСЂРєРёРІР°РЅРёРµ РїСЂРё РЅР°РІРµРґРµРЅРёРё */
 }
 
 /* visited link */
 #dataTable table .col5 a:visited {
-	color: #bbbbbb;						/* Серый цвет - такойже как и у текста */
+	color: #bbbbbb;						/* РЎРµСЂС‹Р№ С†РІРµС‚ - С‚Р°РєРѕР№Р¶Рµ РєР°Рє Рё Сѓ С‚РµРєСЃС‚Р° */
 }
 
 /* mouse over link */
 #dataTable table .col5 a:hover {
-	text-decoration: underline;			/* подчеркивание при наведении */
+	text-decoration: underline;			/* РїРѕРґС‡РµСЂРєРёРІР°РЅРёРµ РїСЂРё РЅР°РІРµРґРµРЅРёРё */
 	color: #00bfff;						/* DeepSkyBlue */
 }
 
@@ -214,21 +252,21 @@ main .center {
 }
 
 
-/* Информационный блок с описанием игры */
+/* РРЅС„РѕСЂРјР°С†РёРѕРЅРЅС‹Р№ Р±Р»РѕРє СЃ РѕРїРёСЃР°РЅРёРµРј РёРіСЂС‹ */
 #gameInfo {
 	/*border: 1px solid green;*/
 	width: 800px;
-    padding: 10px; 					/* поля вокруг текста */
-    margin: auto; 					/* выравниваем по центру */
-    /*background: #fc0;*/			/* цвет фона (оставляем как основной фон) */
+    padding: 10px; 					/* РїРѕР»СЏ РІРѕРєСЂСѓРі С‚РµРєСЃС‚Р° */
+    margin: auto; 					/* РІС‹СЂР°РІРЅРёРІР°РµРј РїРѕ С†РµРЅС‚СЂСѓ */
+    /*background: #fc0;*/			/* С†РІРµС‚ С„РѕРЅР° (РѕСЃС‚Р°РІР»СЏРµРј РєР°Рє РѕСЃРЅРѕРІРЅРѕР№ С„РѕРЅ) */
 	
   /*background-image: url("/images/dead-space-marker1.png");*/ 		/* background image */
-	background-image: url("/images/dead-space-marker1_o60.png");	/* у изображения прозрачность 60% */
+	background-image: url("/images/dead-space-marker1_o60.png");	/* Сѓ РёР·РѕР±СЂР°Р¶РµРЅРёСЏ РїСЂРѕР·СЂР°С‡РЅРѕСЃС‚СЊ 60% */
 	background-color: #002240; 										/* used if the image is unavailable */
 	background-repeat: no-repeat; 									/* do not repeat the image */
 	background-position: center;									/* center the image */
 	/*background-size: cover;*/ 									/* resize the background image to cover the entire container */
-	/*opacity: .7;*/ 												/* прозрачность применяется ко всему контейнеру, а не только к изображению */
+	/*opacity: .7;*/ 												/* РїСЂРѕР·СЂР°С‡РЅРѕСЃС‚СЊ РїСЂРёРјРµРЅСЏРµС‚СЃСЏ РєРѕ РІСЃРµРјСѓ РєРѕРЅС‚РµР№РЅРµСЂСѓ, Р° РЅРµ С‚РѕР»СЊРєРѕ Рє РёР·РѕР±СЂР°Р¶РµРЅРёСЋ */
 }
 
 #gameTitle {
@@ -244,8 +282,8 @@ main .center {
 
 #gameDescription {
 	/*border: 1px solid green;*/
-	text-indent: 1.5em;				/* Отступ первой строки */
-    text-align: justify;			/* Выравнивание по ширине */
+	text-indent: 1.5em;				/* РћС‚СЃС‚СѓРї РїРµСЂРІРѕР№ СЃС‚СЂРѕРєРё */
+    text-align: justify;			/* Р’С‹СЂР°РІРЅРёРІР°РЅРёРµ РїРѕ С€РёСЂРёРЅРµ */
 }
 
 #gameDescription p {
@@ -253,10 +291,10 @@ main .center {
 	font-size: 15px;
 	padding-bottom: 12px;
 }
-/* настраиваем стилизацию ссылки */
+/* РЅР°СЃС‚СЂР°РёРІР°РµРј СЃС‚РёР»РёР·Р°С†РёСЋ СЃСЃС‹Р»РєРё */
 #previewLink a:link {
 	color: #00bfff;					/* DeepSkyBlue */
-	text-decoration: none;			/* отключаем подчеркивание при наведении */
+	text-decoration: none;			/* РѕС‚РєР»СЋС‡Р°РµРј РїРѕРґС‡РµСЂРєРёРІР°РЅРёРµ РїСЂРё РЅР°РІРµРґРµРЅРёРё */
 	
 }
 /* visited link */
@@ -266,7 +304,7 @@ main .center {
 /* mouse over link */
 #previewLink a:hover {
 	color: #ff4500;					/* OrangeRed */
-	text-decoration: underline;		/* подчеркивание при наведении */
+	text-decoration: underline;		/* РїРѕРґС‡РµСЂРєРёРІР°РЅРёРµ РїСЂРё РЅР°РІРµРґРµРЅРёРё */
 }
 /* selected link */
 #previewLink a:active {
@@ -275,11 +313,24 @@ main .center {
 }
 
 
+#gameTest {
+	/*border: 1px solid green;*/
+	width: 800px;
+    padding: 10px; 					/* РїРѕР»СЏ РІРѕРєСЂСѓРі С‚РµРєСЃС‚Р° */
+    margin: auto; 					/* РІС‹СЂР°РІРЅРёРІР°РµРј РїРѕ С†РµРЅС‚СЂСѓ */
+	
+	background-image: url("/images/fake-you.png"); 						/* background image */
+	background-color: #002240; 											/* used if the image is unavailable */
+	background-repeat: no-repeat; 										/* do not repeat the image */
+	background-position: center;										/* center the image */
+	background-size: cover; 											/* resize the background image to cover the entire container */
+}
+
 #gameInfoMassEffect {
 	/*border: 1px solid green;*/
 	width: 800px;
-    padding: 10px; 					/* поля вокруг текста */
-    margin: auto; 					/* выравниваем по центру */
+    padding: 10px; 					/* РїРѕР»СЏ РІРѕРєСЂСѓРі С‚РµРєСЃС‚Р° */
+    margin: auto; 					/* РІС‹СЂР°РІРЅРёРІР°РµРј РїРѕ С†РµРЅС‚СЂСѓ */
 	
 	/*background-image: url("/images/dead-space-reaper1.jpg");*/ 		/* background image */
     background-image: url("/images/dead-space-reaper1_o60.png");
@@ -293,8 +344,8 @@ main .center {
 #gameInfoDyingLight {
 	/*border: 1px solid green;*/
 	width: 800px;
-    padding: 10px; 					/* поля вокруг текста */
-    margin: auto; 					/* выравниваем по центру */
+    padding: 10px; 					/* РїРѕР»СЏ РІРѕРєСЂСѓРі С‚РµРєСЃС‚Р° */
+    margin: auto; 					/* РІС‹СЂР°РІРЅРёРІР°РµРј РїРѕ С†РµРЅС‚СЂСѓ */
 	
     background-image: url("/images/dying-light-img1_o60.png"); 		/* background image (60% opacity) */
 		
@@ -307,8 +358,8 @@ main .center {
 #gameInfoPrey2006 {
 	/*border: 1px solid green;*/
 	width: 800px;
-    padding: 10px; 					/* поля вокруг текста */
-    margin: auto; 					/* выравниваем по центру */
+    padding: 10px; 					/* РїРѕР»СЏ РІРѕРєСЂСѓРі С‚РµРєСЃС‚Р° */
+    margin: auto; 					/* РІС‹СЂР°РІРЅРёРІР°РµРј РїРѕ С†РµРЅС‚СЂСѓ */
 	
     background-image: url("/images/prey-2006-img1.png"); 		/* background image (60% opacity) */
 		
@@ -319,7 +370,7 @@ main .center {
 }
 
 
-/* Футер */
+/* Р¤СѓС‚РµСЂ */
 footer {
 	/*border: 1px solid yellow;*/
 	color: #bbbbbb;
@@ -338,12 +389,12 @@ footer span.social {
 	float: right;
 }
 
-/* настраиваем стилизацию ссылки */
+/* РЅР°СЃС‚СЂР°РёРІР°РµРј СЃС‚РёР»РёР·Р°С†РёСЋ СЃСЃС‹Р»РєРё */
 /* unvisited link */
 footer a:link {
 	/*color: #ff4500;*/				/* OrangeRed */
 	color: #00bfff;					/* DeepSkyBlue */
-	text-decoration: none;			/* отключаем подчеркивание при наведении */
+	text-decoration: none;			/* РѕС‚РєР»СЋС‡Р°РµРј РїРѕРґС‡РµСЂРєРёРІР°РЅРёРµ РїСЂРё РЅР°РІРµРґРµРЅРёРё */
 }
 
 /* visited link */
@@ -355,7 +406,7 @@ footer a:visited {
 /* mouse over link */
 footer a:hover {
 	color: #ff4500;					/* OrangeRed */
-	text-decoration: underline;		/* подчеркивание при наведении */
+	text-decoration: underline;		/* РїРѕРґС‡РµСЂРєРёРІР°РЅРёРµ РїСЂРё РЅР°РІРµРґРµРЅРёРё */
 }
 
 /* selected link */
@@ -363,4 +414,3 @@ footer a:active {
 	color: #ff4500;					/* OrangeRed */
 	text-decoration: none;
 }
-

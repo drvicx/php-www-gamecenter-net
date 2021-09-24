@@ -29,7 +29,8 @@
 	<div class="wrapper">
 	
 		<header>
-			<h1>[GC] КАТАЛОГ ИГР</h1>
+			<span class="headerLeft"><h1>[GC] КАТАЛОГ ИГР</h1></span>
+			<span class="headerRight"><a href="#" target="_blank" rel="nofollow">CMS_v2</a> | <a href="/cms/v1/" target="_blank" rel="nofollow">CMS_v1</a></span>
 		</header>
 
 		<div id="breadcrumbs">

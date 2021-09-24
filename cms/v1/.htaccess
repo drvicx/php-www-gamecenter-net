@@ -1,0 +1,5 @@
+AuthType Basic
+AuthName "Restricted area. For personnel only"
+AuthUserfile "D:/projects/php/php-www-gamecenter-net/cms/v1/.htpasswd"
+Require valid-user
+Allow from all
