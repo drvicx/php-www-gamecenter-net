@@ -37,6 +37,7 @@ footer {
 /* Хедер */
 header {
 	/*border: 1px solid yellow;*/
+	color: #ff4500;					/* OrangeRed */
 }
 /*-Заголовок*/
 .headerLeft {
