@@ -1,18 +1,18 @@
 /**
- *=ПОЛЕЗНЫЕ ИСТОЧНИКИ
+ *=РџРћР›Р•Р—РќР«Р• РРЎРўРћР§РќРРљР
  *
- *	1. Палитры HTML/CSS цветов
+ *	1. РџР°Р»РёС‚СЂС‹ HTML/CSS С†РІРµС‚РѕРІ
  *	   https://colorscheme.ru/html-colors.html
  *	   https://csscolor.ru/hex/c230d9
  *
 */
 
-/* фон под цвет голубого фона винды */
+/* С„РѕРЅ РїРѕРґ С†РІРµС‚ РіРѕР»СѓР±РѕРіРѕ С„РѕРЅР° РІРёРЅРґС‹ */
 body {
-	background-color: #002240;	/* темно-синий */
+	background-color: #002240;	/* С‚РµРјРЅРѕ-СЃРёРЅРёР№ */
 }
 
-/* текст по центру страницы */
+/* С‚РµРєСЃС‚ РїРѕ С†РµРЅС‚СЂСѓ СЃС‚СЂР°РЅРёС†С‹ */
 div.centered {
 	position: absolute;
 	top: 50%;
@@ -21,7 +21,7 @@ div.centered {
 	transform: translate(-50%, -50%)
 }
 
-/* автомасштабирование текста по % of viewport width*/
+/* Р°РІС‚РѕРјР°СЃС€С‚Р°Р±РёСЂРѕРІР°РЅРёРµ С‚РµРєСЃС‚Р° РїРѕ % of viewport width*/
 div.centered h1 {
 	/*color: #FF8C00;*/				/* DarkOrange */
 	/*color: #B22222;*/				/* FireBrick */
@@ -29,11 +29,11 @@ div.centered h1 {
 	font-size: 4.5vw;
 }
 
-/* убираем стилизацию под ссылку */
+/* СѓР±РёСЂР°РµРј СЃС‚РёР»РёР·Р°С†РёСЋ РїРѕРґ СЃСЃС‹Р»РєСѓ */
 /* unvisited link */
 div.centered a:link {
   color: #ff4500;					/* OrangeRed */
-  text-decoration: none;			/* отключаем подчеркивание при наведении */
+  text-decoration: none;			/* РѕС‚РєР»СЋС‡Р°РµРј РїРѕРґС‡РµСЂРєРёРІР°РЅРёРµ РїСЂРё РЅР°РІРµРґРµРЅРёРё */
 }
 
 /* visited link */
@@ -44,7 +44,7 @@ div.centered a:visited {
 /* mouse over link */
 div.centered a:hover {
   color: #ff4500;					/* OrangeRed */
-  /*text-decoration: underline;*/	/* подчеркивание при наведении */
+  /*text-decoration: underline;*/	/* РїРѕРґС‡РµСЂРєРёРІР°РЅРёРµ РїСЂРё РЅР°РІРµРґРµРЅРёРё */
 }
 
 /* selected link */
